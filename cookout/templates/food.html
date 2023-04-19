@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/foo.css">
+    <title>{{ gg }}</title>
+</head>
+<body>
+    <div class="topbar">
+        <h2>Cookout</h2>
+        <div class="Cook">
+        <a href="/">
+            <div class="card">
+                <button>
+                    <p>Home</p>
+                </button>
+            </div>
+        </a>
+            <a href="/cook">
+                <div class="card">
+                    <button>
+                        <p>Discover recipes</p>
+                    </button>
+                </div>
+            </a>
+    </div>
+    </div>
+    <div class="container">
+        <div class="food_suggestion">
+            <img src="{{ gg.Image.url }}" alt="hehe we got an error">
+            <div class="info">
+                <div class="over_info">
+                    <h3>{{ gg.Name }}</h3> <br>
+                    <h2>Utensils</h2><br>
+                    {% for u in gg.utensils.all %}
+                    <a href="{{ u.Suggested_Url }}">
+                        <p>{{ u }}</p><br>
+                    </a>
+                   {% endfor %}
+                   <h2>Ingredients</h2>
+                   {% for i in gg.ingredients.all %}
+                   <a href="{{ i.Suggested_Url }}">
+                    <p>{{ i }}</p><br>
+                   </a>
+                   {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="recipe">
+            <h1>Recipe</h1>
+            <p>{{ gg.Tutorial }}
+        </div>
+    </div>
+
+</body>
+</html>

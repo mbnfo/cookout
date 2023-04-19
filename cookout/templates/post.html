@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="post" method="post">
+        {% csrf_token %}
+        <p>Ingredients:</p>
+        <input list="ingredient" name ='ingredient'>
+        <datalist id="ingredient">
+            {% for i in ingredient %}
+            <option value="{{i.name}}"></option>
+            {% endfor %}
+        </datalist>
+        <p>required utensils:</p>
+        <input list="utensil" name ='utensil'>
+        <datalist id="utensil">
+            {% for i in utensil %}
+            <option value="{{i}}"></option>
+            {% endfor %}
+        </datalist>
+        <p>Name of recipe</p>
+        <input type="text" name="recipe" id="">
+        <p>Description of your recipe</p>
+        <input type="text" name="description">
+        <p>Tutorial:</p>
+        <input type="text" name="tutorial" id="">
+        <p>tutorial link:</p>
+        <input type="text" name="tutorial_link" id="">
+        <p>estimated cook time</p>
+        <input type="time" name="time" id="">
+        <p>image:</p>
+        <input type="file" name="image" id=""><br>
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>

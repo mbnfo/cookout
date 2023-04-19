@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/h.css">
+    <title>Home</title>
+</head>
+<body>
+    <div class="topbar">
+        <h2>Cookout</h2>
+        <div class="Cook">
+        <a href="/">
+            <div class="card">
+                <button>
+                    <p>Home</p>
+                </button>
+            </div>
+                <a href="/cook">
+                    <div class="card">
+                        <button>
+                            <p>Discover recipes</p>
+                        </button>
+                    </div>
+                </a>
+        </div>
+    </div>
+    </div>
+    <div class="container"> 
+        {% for i in food %}
+        <div class="food_suggestion">
+            <img src="{{ i.Image.url }}" alt="hehe we got an error">
+            <div class="info">
+                <h3>{{ i.Name }}</h3> <br>
+                <h2>{{ i.Chef }}</h2><br>
+               <p>{{ i.Description | truncatewords:50 }}</p><br>
+               <p>{{ i.head }}</p><br>
+               <a href="{{i.Name}}">
+                <button>Try Out Recipe</button>
+               </a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</body> 
+</html>

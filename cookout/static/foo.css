@@ -1,0 +1,150 @@
+body{
+    background-color: rgba(0, 0, 0, 0.822);
+}
+
+.Cook {
+    display: flex;
+}
+
+.topbar{
+    background-color: rgba(59, 59, 59, 0.637);
+    width: 99%;
+    height: 50px;
+    display: flex;
+    position: fixed;
+    margin-top: -8px;
+    z-index: 9;
+}
+
+.Cook{
+    margin-left: 1000px;
+    margin-top: 5px;
+}
+
+.topbar h2{
+    margin-top: 1%;
+    color: wheat;
+}
+
+.Cook a{
+    margin-left: 15px;
+    color: wheat;
+    text-decoration-style:none;
+}
+
+.Cook button{
+    color: wheat;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 5px ;
+    border: none;
+}
+
+.Cook button:hover{
+    transition: .5s;
+    background-color: rgb(64, 94, 94);
+    margin-top: -2px;
+}
+
+
+.Cook .card{
+    width: fit-content;
+}
+
+.container{
+    display: grid;
+    transition: all 0.45s ease;
+}
+
+.food_suggestion{
+    max-height: fit-content;
+    width: fit-content;
+    margin-top: 50px;
+    display: flex;
+    margin-left: 150px;
+}
+
+.food_suggestion img{
+    height: 645px;
+    width: 545px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.food_suggestion .info{
+    height: 645px;
+    width: 500px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: rgba(207, 202, 202, 0.075);
+    text-align: center;
+}
+
+.over_info{
+    background-color: rgba(128, 128, 128, 0.678);
+    height: 100%;
+    margin-top: -50px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.info h3{
+    color:black;
+    margin-top: 50px;
+    margin-bottom: -25px;
+    font-size: 50px;
+    text-decoration-style: double;
+    transition: 0.1s;
+}
+
+.info h2{
+    color:black;
+    font-style: oblique;
+    font-size: xx-large;
+    margin-top: 30px;
+    margin-bottom: 4px;
+    transition: 0.1s;
+}
+
+
+.info .over_info p{
+    color:wheat;
+    transition: 0.1s;
+    font-size: 15;
+    margin-bottom: -25px;
+}
+
+.over_info a{
+    text-decoration: none;
+}
+
+.info button{
+    background-color: rgb(63, 94, 94);
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    border-width: 0px;
+    height: 20px;
+    transition: 0.1s;
+    margin-top: 10px;
+}
+
+.info button:hover{
+    transition: 0.5s;
+    margin-top: 10px ;
+    height: 30px;
+    background-color: black;
+    border-radius: 2px;
+}
+
+.recipe{
+    text-align: center;
+}
+
+.recipe p{
+    color: white;
+}
+
+.container h1{
+    font-style: oblique;
+    font-size: 50px;
+    color: wheat;
+}
